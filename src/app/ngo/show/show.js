@@ -18,8 +18,6 @@ var ngodata = {
     'Health',
     'Eduation',
     'Health',
-    'Eduation',
-    'Health',
     'Eduation'
   ],
   nFollowers: 100,

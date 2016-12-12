@@ -3,7 +3,7 @@ angular
   .controller('hasalatTerminateController', ['$stateParams', 'terminateHasala', function ($stateParams, terminateHasala) {
     this.hasala = {
       name: $stateParams.hasalaName,
-      id: $stateParams.hasalaId,
+      id: $stateParams.hasalaId
     };
     // this.formData = {
     //   confirm: false,

@@ -49,7 +49,25 @@
         <uib-accordion-heading>
           Stats <fa name="expand" class="pull-right"></fa>
         </uib-accordion-heading>
-        Here goes the stats
+        <div class="container-fluid stats">
+          <div class="row">
+            <div class="col-sm-3">
+              <p><span>{{hasala.details.nFollowers}}</span> Followers</p>
+            </div>
+            <div class="col-sm-3">
+              <p><span>{{hasala.details.nShares}}</span> Shares</p>
+              <p><span>{{hasala.details.nViews}}</span> Views</p>
+            </div>
+            <div class="col-sm-3">
+              <p><span>{{hasala.details.nDoners}}</span> Doners</p>
+              <p><span>{{hasala.details.nDonation}}</span> Donation</p>
+            </div>
+            <div class="col-sm-3">
+              <p><span>{{hasala.details.avgDonationsTime}}</span> Average don. per time</p>
+              <p><span>{{hasala.details.avgDonationsUser}}</span> Average don. per user</p>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div uib-accordion-group class="panel-default" is-open="true">

@@ -89,3 +89,19 @@ header{
 .progress{
   margin-bottom: 4px;
 }
+
+// hasala show
+.stats{
+  span{
+    display: block;
+    font-weight: 600;
+    font-size: 18px;
+  }
+  p{
+    display: inline-block;
+    width: 80px;
+  }
+  p + p{
+    margin-left: 20px;
+  }
+}

@@ -15,7 +15,7 @@ angular
 var data = {
   id: 1,
   name: 'Haga Soraya vegetable business',
-  photo: 'http://lorempixel.com/300/250/',
+  photo: 'http://lorempixel.com/500/300/',
   donation: 25,
   target: 1000,
   status: 'expired',

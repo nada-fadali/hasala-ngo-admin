@@ -14,5 +14,10 @@ angular
         url: '/hasalat/:hasalaId',
         templateUrl: 'app/hasalat/show/show.html',
         controller: 'hasalatShowController as hasala'
+      })
+      .state('ngoShow', {
+        url: '/',
+        templateUrl: 'app/ngo/show/show.html',
+        controller: 'ngoShowController as ngo'
       });
   }]);

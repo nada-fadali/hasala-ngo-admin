@@ -1,13 +1,44 @@
 <div class="container">
-
-  <h1>
-    {{hasala.details.name}}
-  </h1>
-  <img src="{{hasala.details.photo}}" alt="{{hasala.details.name}}" class="img-thumbnail img-responsive">
-  <div>
-    <p>Status: {{hasala.details.status}}</p>
-    <p>Donation: {{hasala.details.donation}}%</p>
-    <p>Target: EGP{{hasala.details.target}}</p>
-    <p>Description: {{hasala.details.description}}</p>
+  <div class="row">
+    <div class="col-sm-6">
+      <h1>{{hasala.details.name}}</h1>
+    </div>
+    <div class="col-sm-2 col-sm-offset-2">
+      <a class="btn btn-primary btn-block">Edit</a>
+    </div>
+    <div class="col-sm-2">
+      <a class="btn btn-danger btn-block">Terminate</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="row">
+        <div class="col-sm-8">
+          <div class="progress-container">
+            <div class="progress">
+              <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="{{hasala.details.donation}}" aria-valuemin="0" aria-valuemax="100" style="width: {{hasala.details.donation}}%;">
+                {{hasala.details.donation}}%
+              </div>
+            </div>
+            <p class="pull-right"><small>EGP</small> {{hasala.details.target}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+        <p>Description:</p>
+        <p>{{hasala.details.description}}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <p>Created: {{hasala.details.dateCreated}}</p>
+          <p>Expires: {{hasala.details.deadline}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <img src="{{hasala.details.photo}}" alt="{{hasala.details.name}}" class="img-thumbnail img-responsive pull-right">
+    </div>
   </div>
 </div>

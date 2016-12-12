@@ -24,6 +24,13 @@ $black: #444;
   border-color: $dark-blue;
 }
 
+h1{
+  margin: 0;
+}
+.row{
+  margin-bottom: 20px;
+}
+
 //header
 header{
   nav{
@@ -54,11 +61,6 @@ header{
 
 // hasalat index
 .hasalat-container{
-  h1{
-    margin: 0;
-  }
-
-  .row,
   .col-sm-4{
     margin-bottom: 20px;
   }
@@ -78,12 +80,12 @@ header{
       color: $white;
       padding: 6px 0;
     }
-
-    .progress-container{
-      margin-bottom: 40px;
-    }
-    .progress{
-      margin-bottom: 4px;
-    }
   }
+}
+
+.progress-container{
+  margin-bottom: 40px;
+}
+.progress{
+  margin-bottom: 4px;
 }

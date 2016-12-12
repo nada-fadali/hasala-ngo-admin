@@ -1,1 +1,55 @@
-ngo profile
+<div class="container ngo-container">
+  <div class="row info">
+    <img src="{{ngo.details.cover}}" alt="{{ngo.details.name}}" class="img-thumbnail">
+    <img src="{{ngo.details.logo}}" alt="{{ngo.details.name}}" class="img-thumbnail img-circle logo">
+    <h1>{{ngo.details.name}}</h1>
+  </div>
+
+  <div class="row info">
+    <div class="col-sm-8 col-sm-offset-2">
+      <p class="description">{{ngo.details.description}}</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2 category">
+      <span ng-repeat="category in ngo.details.categories track by $index">
+        {{category}}
+      </span>
+    </div>
+  </div>
+
+
+
+  <div class="row">
+    <h3>Stats</h3>
+    <div class="stats">
+      <div class="col-sm-3">
+        <p><span>{{ngo.details.nFollowers}}</span> Followers</p>
+      </div>
+
+      <div class="col-sm-3">
+        <p><span>{{ngo.details.nViews}}</span> Views</p>
+      </div>
+
+      <div class="col-sm-3">
+        <p><span>{{ngo.details.nDonors}}</span> Donors</p>
+      </div>
+
+      <div class="col-sm-3">
+        <p><span>{{ngo.details.nDonations}}</span> Donations</p>
+      </div>
+
+      <div class="col-sm-3">
+        <p><span>{{ngo.details.nHasalat}}</span> Hasalat</p>
+      </div>
+
+      <div class="col-sm-3">
+        <p><span>{{ngo.details.nHasalatFinished}}</span> Hasalat Finished</p>
+      </div>
+
+    </div>
+  </div>
+
+
+</div>

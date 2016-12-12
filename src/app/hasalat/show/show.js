@@ -3,18 +3,18 @@ angular
   .controller('hasalatShowController', ['$stateParams', 'getHasalaDetails', function ($stateParams, getHasalaDetails) {
     // this.show = getHasalaDetails.getHasala($stateParams.hasalaId);
     this.details = getHasalaDetails;
+
+    // handle dates
+    this.getDate = function (date){
+      var tmp = new Date(date);
+      return tmp.toLocaleString();
+    }
   }])
   .factory('getHasalaDetails', [function () {
     this.getHasala = function (id) {
       return hasalatList[id];
     };
     // return this;
-
-    // handle date
-    x = new Date(data.dateCreated);
-    data.dateCreated = x.toLocaleString();
-    y = new Date(data.deadline);
-    data.deadline = y.toLocaleString();
 
     //get milestones count
     data.nMilestones = data.milestones.length;
@@ -48,7 +48,7 @@ var data = {
     {
       title: 'Haga Soraya bought her new shalk',
       caption: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-      photo: 'http://lorempixel.com/300/100/',
+      photo: 'http://lorempixel.com/600/300/',
       timestamp: '2016-12-10 16:49:30 +0200'
     },
     {
@@ -59,7 +59,7 @@ var data = {
     {
       title: 'Haga Soraya bought her new shalk',
       caption: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-      photo: 'http://lorempixel.com/300/100/',
+      photo: 'http://lorempixel.com/500/400/',
       timestamp: '2016-12-10 16:49:30 +0200'
     }
   ],

@@ -33,8 +33,8 @@
       </div>
       <div class="row">
         <div class="col-sm-12">
-          <p>Created: {{hasala.details.dateCreated}}</p>
-          <p>Expires: {{hasala.details.deadline}}</p>
+          <p>Created: {{hasala.getDate(hasala.details.dateCreated)}}</p>
+          <p>Expires: {{hasala.getDate(hasala.details.deadline)}}</p>
         </div>
       </div>
     </div>
@@ -84,10 +84,10 @@
                 <p>{{milestone.description}}</p>
               </div>
               <div class="col-sm-2 col-sm-offset-2">
-                <p>Target: EGP <strong>{{milestone.target}}</strong></p>
+                <h4>Target: EGP <strong>{{milestone.target}}</strong></h4>
                 <div ng-if="milestone.done" class="bg-success">Milestone Achieved</div>
                 <div ng-if="!milestone.done">
-                  <button class="btn btn-primary btn-block">Mark as Achieved</button>
+                  <a class="btn btn-primary btn-block">Mark as Achieved</a>
                 </div>
               </div>
             </div>
@@ -98,8 +98,28 @@
       <div uib-accordion-group class="panel-default" is-open="true">
         <uib-accordion-heading>
           Follow Ups <fa name="expand" class="pull-right"></fa>
+          <a class="btn btn-success">Add Follow up</a>
         </uib-accordion-heading>
-        Here goes the followups
+        <div class="container-fluid">
+          <div ng-repeat="update in hasala.details.updates">
+            <div class="row">
+              <div class="col-sm-8 col-sm-offset-2 updates">
+                <div class="row">
+                  <div class="col-sm-8"><h3>{{update.title}}</h3></div>
+                  <div class="col-sm-4"><p>{{hasala.getDate(update.timestamp)}}</p></div>
+                </div>
+                <div ng-if="update.photo">
+                  <div class="col-sm-12">
+                    <img src="{{update.photo}}" alt="{{update.title}}" class="img-thumbnail img-responsive">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-12"><p>{{update.caption}}</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </uib-accordion>
   </div>

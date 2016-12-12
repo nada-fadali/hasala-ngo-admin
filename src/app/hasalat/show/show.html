@@ -10,6 +10,7 @@
       <a class="btn btn-danger btn-block">Terminate</a>
     </div>
   </div>
+
   <div class="row">
     <div class="col-sm-6">
       <div class="row">
@@ -41,4 +42,30 @@
       <img src="{{hasala.details.photo}}" alt="{{hasala.details.name}}" class="img-thumbnail img-responsive pull-right">
     </div>
   </div>
+
+  <div class="row">
+    <uib-accordion close-others="false">
+      <div uib-accordion-group class="panel-default" is-open="true">
+        <uib-accordion-heading>
+          Stats <fa name="expand" class="pull-right"></fa>
+        </uib-accordion-heading>
+        Here goes the stats
+      </div>
+
+      <div uib-accordion-group class="panel-default" is-open="true">
+        <uib-accordion-heading>
+          Milestones <fa name="expand" class="pull-right"></fa>
+        </uib-accordion-heading>
+        Here goes the milestones
+      </div>
+
+      <div uib-accordion-group class="panel-default" is-open="true">
+        <uib-accordion-heading>
+          Follow Ups <fa name="expand" class="pull-right"></fa>
+        </uib-accordion-heading>
+        Here goes the followups
+      </div>
+    </uib-accordion>
+  </div>
+
 </div>

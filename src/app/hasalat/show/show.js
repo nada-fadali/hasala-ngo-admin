@@ -9,6 +9,10 @@ angular
       var tmp = new Date(date);
       return tmp.toLocaleString();
     };
+    // mark milestones
+    this.completeMilestone = function (index) {
+      this.details.milestones[index].done = 1;
+    };
   }])
   .factory('getHasalaDetails', [function () {
     this.getHasala = function (id) {

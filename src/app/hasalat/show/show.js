@@ -5,10 +5,10 @@ angular
     this.details = getHasalaDetails;
 
     // handle dates
-    this.getDate = function (date){
+    this.getDate = function (date) {
       var tmp = new Date(date);
       return tmp.toLocaleString();
-    }
+    };
   }])
   .factory('getHasalaDetails', [function () {
     this.getHasala = function (id) {
@@ -16,7 +16,7 @@ angular
     };
     // return this;
 
-    //get milestones count
+    // get milestones count
     data.nMilestones = data.milestones.length;
 
     return data;

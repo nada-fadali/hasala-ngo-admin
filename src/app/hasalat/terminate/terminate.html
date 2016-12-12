@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row">
+    <h1>Terminate Hasala</h1>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <form name="hasalaTerminateCtl.form" ng-submit="hasalaTerminateCtl.terminate(hasalaTerminateCtl.formData)">
+        <div class="checkbox">
+          <h4>Are you sure you want to terminate <strong>{{hasalaTerminateCtl.name}}</strong>?</h4>
+          <label><input type="checkbox" ng-model="hasalaTerminateCtl.formData.confirm" name="confirm" required="" />Yes, I want to terminate this hasala </label>
+        </div>
+
+        <div class="form-group">
+         <label>Please, state the reason</label>
+         <textarea ng-model="hasalaTerminateCtl.formData.reason" class="form-control" required=""></textarea>
+        </div>
+
+        <input type="submit" class="btn btn-danger" value="Send" />
+      </form>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-sm-6">
+      <p> We will be reviewing your request and contact you.</p>
+    </div>
+  </div>
+
+
+
+
+
+</div>

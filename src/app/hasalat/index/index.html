@@ -20,11 +20,9 @@
           <div class="col-sm-12">
             <p>Status: {{hasala.status}}</p>
             <div class="progress-container">
-              <div class="progress">
-                <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="{{hasala.donation}}" aria-valuemin="0" aria-valuemax="100" style="width: {{hasala.donation}}%;">
-                  {{hasala.donation}}%
-                </div>
-              </div>
+              <uib-progressbar class="" value="hasala.donation" type="primary">
+                {{hasala.donation}}%
+              </uib-progressbar>
               <p class="pull-right"><small>EGP</small> {{hasala.target}}</p>
             </div>
           </div>
@@ -32,7 +30,7 @@
             <div class="btn-group " ng-if="!hasala.isTerminated">
               <a ui-sref="hasala({ hasalaId: hasala.id })" class="btn btn-primary">View</a>
               <a href="" class="btn btn-success">Add Followup</a>
-              <a href="" class="btn btn-danger">Terminate</a>
+              <a ui-sref="hasalaTerminate({ hasalaId: hasala.id, hasalaName: hasala.name })" class="btn btn-danger">Terminate</a>
             </div>
             <div class="isTerminated" ng-if="hasala.isTerminated">
               Pending termination

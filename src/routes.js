@@ -15,6 +15,12 @@ angular
         templateUrl: 'app/hasalat/show/show.html',
         controller: 'hasalatShowController as hasala'
       })
+      .state('hasalaTerminate', {
+        url: '/hasala/:hasalaId/terminate',
+        templateUrl: 'app/hasalat/terminate/terminate.html',
+        params: {hasalaName: null},
+        controller: 'hasalatTerminateController as hasalaTerminateCtl'
+      })
       .state('ngoShow', {
         url: '/',
         templateUrl: 'app/ngo/show/show.html',

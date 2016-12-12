@@ -7,7 +7,7 @@
       <a class="btn btn-primary btn-block">Edit</a>
     </div>
     <div class="col-sm-2">
-      <a class="btn btn-danger btn-block">Terminate</a>
+      <a class="btn btn-danger btn-block" ui-sref="hasalaTerminate({ hasalaId: hasala.details.id, hasalaName: hasala.details.name })">Terminate</a>
     </div>
   </div>
 
@@ -16,11 +16,9 @@
       <div class="row">
         <div class="col-sm-8">
           <div class="progress-container">
-            <div class="progress">
-              <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="{{hasala.details.donation}}" aria-valuemin="0" aria-valuemax="100" style="width: {{hasala.details.donation}}%;">
-                {{hasala.details.donation}}%
-              </div>
-            </div>
+            <uib-progressbar class="" value="hasala.details.donation" type="primary">
+              {{hasala.details.donation}}%
+            </uib-progressbar>
             <p class="pull-right"><small>EGP</small> {{hasala.details.target}}</p>
           </div>
         </div>

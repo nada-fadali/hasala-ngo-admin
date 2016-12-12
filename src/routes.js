@@ -25,5 +25,11 @@ angular
         url: '/',
         templateUrl: 'app/ngo/show/show.html',
         controller: 'ngoShowController as ngo'
+      })
+      .state('ngoEdit', {
+        url: '/profile/edit',
+        params: {ngo: null},
+        templateUrl: 'app/ngo/edit/edit.html',
+        controller: 'ngoEditController as ngoEditCtl'
       });
   }]);

@@ -8,6 +8,7 @@ angular
   }]);
 
 var ngodata = {
+  id: '0',
   name: 'Masr El Kheir',
   cover: 'http://lorempixel.com/1200/300/',
   logo: 'http://lorempixel.com/300/300/',

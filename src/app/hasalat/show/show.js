@@ -9,6 +9,13 @@ angular
       return hasalatList[id];
     };
     // return this;
+
+    x = new Date(data.dateCreated);
+    data.dateCreated = x.toLocaleString();
+
+    y = new Date(data.deadline);
+    data.deadline = y.toLocaleString();
+
     return data;
   }]);
 

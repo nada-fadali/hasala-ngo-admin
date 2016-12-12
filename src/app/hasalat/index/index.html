@@ -1,0 +1,46 @@
+<div class="container hasalat-container">
+
+  <div class="row">
+    <div class="col-sm-6">
+      <h1> {{hasalat.ngo}}'s hasalat </h1>
+    </div>
+    <div class="col-sm-2 col-sm-offset-3">
+      <a href="#" class="btn btn-success btn-block">New Hasala</a>
+    </div>
+  </div>
+
+  <div class="row">
+    <div ng-repeat="hasala in hasalat.list">
+      <div class="col-sm-4">
+        <div class="container-fluid  __container">
+          <div class="col-sm-12">
+            <img src="{{hasala.photo}}" alt="{{hasala.name}}" class="img-thumbnail img-responsive">
+            <h2>{{hasala.name}}</h2>
+          </div>
+          <div class="col-sm-12">
+            <p>Status: {{hasala.status}}</p>
+            <div class="progress-container">
+              <div class="progress">
+                <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="{{hasala.donation}}" aria-valuemin="0" aria-valuemax="100" style="width: {{hasala.donation}}%;">
+                  {{hasala.donation}}%
+                </div>
+              </div>
+              <p class="pull-right"><small>EGP</small> {{hasala.target}}</p>
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <div class="btn-group " ng-if="!hasala.isTerminated">
+              <a ui-sref="hasala({ hasalaId: hasala.id })" class="btn btn-primary">View</a>
+              <a href="" class="btn btn-success">Add Followup</a>
+              <a href="" class="btn btn-danger">Terminate</a>
+            </div>
+            <div class="isTerminated" ng-if="hasala.isTerminated">
+              Pending termination
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

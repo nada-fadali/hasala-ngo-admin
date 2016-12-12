@@ -1,0 +1,89 @@
+// Overrides
+$yellow: #FECC00;
+$light-green: #92C510;
+$dark-green: #507B10;
+$orange: #FFA934;
+$light-grey: #F2F2F2;
+$dark-gray: #CCCCCC;
+$dark-blue: #373A4B;
+$red: #d9534f;
+$white: #fff;
+$black: #444;
+
+.btn-primary,
+.progress-bar-primary{
+  background-color: $dark-green;
+  border-color: $dark-green;
+}
+.btn-warning{
+  background-color: $yellow;
+  border-color: $yellow;
+}
+.btn-success{
+  background-color: $dark-blue;
+  border-color: $dark-blue;
+}
+
+//header
+header{
+  nav{
+    .navbar-brand{
+      padding: 0;
+      img{
+        width: 100px;
+        display: inline;
+        background-color: #fff;
+      }
+      small{
+        font-size: 12px;
+        color: $white;
+      }
+    }
+  }
+}
+.navbar-default .navbar-nav>li>a{
+  color: $dark-green;
+  font-size: 14px;
+  font-weight: 600;
+}
+.navbar-default {
+  background-color: $light-green;
+}
+
+
+
+// hasalat index
+.hasalat-container{
+  h1{
+    margin: 0;
+  }
+
+  .row,
+  .col-sm-4{
+    margin-bottom: 20px;
+  }
+
+  .__container{
+    border:1px solid #eee;
+    padding: 10px;
+
+    h2{
+      font-size: 20px;
+    }
+
+    .isTerminated{
+      width: 100%;
+      text-align: center;
+      background-color: $red;
+      color: $white;
+      padding: 6px 0;
+    }
+
+    .progress-container{
+      margin-bottom: 40px;
+    }
+    .progress{
+      margin-bottom: 4px;
+    }
+  }
+}

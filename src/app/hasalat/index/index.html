@@ -14,8 +14,8 @@
       <div class="col-sm-4">
         <div class="container-fluid  __container">
           <div class="col-sm-12">
-            <img src="{{hasala.photo}}" alt="{{hasala.name}}" class="img-thumbnail img-responsive">
-            <h2>{{hasala.name}}</h2>
+            <a ui-sref="hasala({ hasalaId: hasala.id })"><img src="{{hasala.photo}}" alt="{{hasala.name}}" class="img-thumbnail img-responsive"></a>
+            <h2><a ui-sref="hasala({ hasalaId: hasala.id })">{{hasala.name}}</a></h2>
           </div>
           <div class="col-sm-12">
             <p>Status: {{hasala.status}}</p>

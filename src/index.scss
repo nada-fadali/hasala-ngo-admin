@@ -105,3 +105,21 @@ header{
     margin-left: 20px;
   }
 }
+
+.milestones{
+  border: 1px solid $dark-gray;
+  padding: 10px;
+
+  .order{
+    text-align: center;
+    height: 100%;
+    font-size: 28px;
+    padding: 20px 0;
+    background-color: $orange;
+  }
+
+  .bg-success{
+    text-align: center;
+    padding: 10px;
+  }
+}

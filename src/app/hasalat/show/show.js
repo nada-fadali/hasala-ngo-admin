@@ -10,11 +10,14 @@ angular
     };
     // return this;
 
+    // handle date
     x = new Date(data.dateCreated);
     data.dateCreated = x.toLocaleString();
-
     y = new Date(data.deadline);
     data.deadline = y.toLocaleString();
+
+    //get milestones count
+    data.nMilestones = data.milestones.length;
 
     return data;
   }]);
@@ -61,7 +64,7 @@ var data = {
     }
   ],
 
-  nMilestonesDone: 2,
+  nMilestonesDone: 3,
   milestones: [
     {
       title: 'Haga Soraya to buy her new shalk',

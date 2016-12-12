@@ -73,8 +73,26 @@
       <div uib-accordion-group class="panel-default" is-open="true">
         <uib-accordion-heading>
           Milestones <fa name="expand" class="pull-right"></fa>
+          <p class="pull-right"><strong>{{hasala.details.nMilestonesDone}}</strong> out of </span>{{hasala.details.nMilestones}} completed</span></p>
         </uib-accordion-heading>
-        Here goes the milestones
+        <div class="container-fluid">
+          <div ng-repeat="milestone in hasala.details.milestones">
+            <div class="row milestones">
+              <div class="col-sm-1 order">{{$index+1}}</div>
+              <div class="col-sm-6">
+                <h5>{{milestone.title}}</h5>
+                <p>{{milestone.description}}</p>
+              </div>
+              <div class="col-sm-2 col-sm-offset-2">
+                <p>Target: EGP <strong>{{milestone.target}}</strong></p>
+                <div ng-if="milestone.done" class="bg-success">Milestone Achieved</div>
+                <div ng-if="!milestone.done">
+                  <button class="btn btn-primary btn-block">Mark as Achieved</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div uib-accordion-group class="panel-default" is-open="true">

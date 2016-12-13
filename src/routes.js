@@ -15,6 +15,17 @@ angular
         templateUrl: 'app/hasalat/show/show.html',
         controller: 'hasalatShowController as hasala'
       })
+      .state('hasalaEdit', {
+        url: '/hasalat/:hasalaId/edit',
+        templateUrl: 'app/hasalat/edit/edit.html',
+        params: {hasala: null},
+        controller: 'hasalatEditController as hasalaEditCtl'
+      })
+      .state('hasalaNew', {
+        url: '/hasala/new',
+        templateUrl: 'app/hasalat/new/new.html',
+        controller: 'hasalatNewController as hasalaNewCtl'
+      })
       .state('hasalaTerminate', {
         url: '/hasala/:hasalaId/terminate',
         templateUrl: 'app/hasalat/terminate/terminate.html',

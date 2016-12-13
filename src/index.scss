@@ -3,7 +3,7 @@ $yellow: #FECC00;
 $light-green: #92C510;
 $dark-green: #507B10;
 $orange: #FFA934;
-$light-grey: #F2F2F2;
+$light-gray: #F2F2F2;
 $dark-gray: #CCCCCC;
 $dark-blue: #373A4B;
 $red: #d9534f;
@@ -198,3 +198,29 @@ header{
   }
 }
 
+
+
+// new hasala form
+.hasala-review{
+  background-color: $light-gray;
+
+  h3{
+    color: $dark-gray;
+  }
+}
+.newhasala-form{
+  .timepicker{
+    margin-top: -34px;
+  }
+  .milestone-card{
+    padding: 10px;
+    border:1px solid $dark-gray;
+
+    [class^='col-sm'], [class*=' col-sm']{
+      padding: 0;
+    }
+    .col-sm-12{
+      margin-top: 10px;
+    }
+  }
+}

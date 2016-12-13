@@ -1,0 +1,123 @@
+<div class="container">
+  <div class="row">
+    <h1>New Hasala</h1>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <form class="newhasala-form" name="hasalaNewCtl.form" ng-submit="hasalaNewCtl.new(hasalaNewCtl.hasalaData)">
+
+        <div class="form-group">
+         <label>Name</label>
+         <input type="text" name="" ng-model="hasalaNewCtl.hasalaData.name" class="form-control" required="">
+        </div>
+
+        <div class="form-group">
+         <label>Target</label>
+         <input type="number" name="" ng-model="hasalaNewCtl.hasalaData.target" class="form-control" placeholder="in EGP" required="">
+        </div>
+
+        <div class="form-group">
+         <label>Description</label>
+         <textarea rows="5" ng-model="hasalaNewCtl.hasalaData.description" class="form-control" required=""></textarea>
+        </div>
+
+        <div class="form-group">
+         <label>Photo</label>
+         <input type="file" name="">
+        </div>
+
+        <div class="form-group">
+          <label>Deadline</label>
+          <div class="row">
+            <div class="col-sm-6">
+              <p class="input-group">
+                <input type="text" class="form-control" uib-datepicker-popup="dd-MMMM-yyyy" ng-model="hasalaNewCtl.hasalaData.deadline.date" is-open="hasalaNewCtl.datepickerOpen" datepicker-options="hasalaNewCtl.datepickerOptions" ng-required="true" close-text="Close" alt-input-formats="['M!/d!/yyyy']" />
+                <span class="input-group-btn">
+                  <button type="button" class="btn btn-default" ng-click="hasalaNewCtl.openDatepicker()"><fa name="calendar"></fa></button>
+                </span>
+              </p>
+            </div>
+            <div class="col-sm-6">
+              <div class="timepicker" uib-timepicker ng-model="hasalaNewCtl.hasalaData.deadline.time" hour-step="1" minute-step="5" show-meridian="true"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <h4>Milestones</h4>
+          <div class="row">
+            <div class="col-sm-3"><label>Total Number</label></div>
+            <div class="col-sm-4">
+              <input type="number" name="" ng-model="hasalaNewCtl.hasalaData.nMilestones" class="form-control" required="">
+            </div>
+          </div>
+          <div ng-repeat="n in [] | range:hasalaNewCtl.hasalaData.nMilestones">
+            <div class="row milestone-card">
+              <div class="col-sm-2">
+                <input type="number" class="form-control" value="{{$index+1}}">
+              </div>
+              <div class="col-sm-7">
+                <input type="text" class="form-control" placeholder="Milestone title" ng-model="hasalaNewCtl.hasalaData.milestones[$index].title">
+              </div>
+              <div class="col-sm-3">
+                <input type="number" class="form-control" placeholder="Target EGP" ng-model="hasalaNewCtl.hasalaData.milestones[$index].target">
+              </div>
+              <div class="col-sm-12">
+                <textarea placeholder="Description" class="form-control" ng-model="hasalaNewCtl.hasalaData.milestones[$index].description"></textarea>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-danger">Create Hasala <fa name="plus"></fa> </button>
+      </form>
+    </div>
+
+    <div class="col-sm-6 hasala-review">
+      <h3>Preview</h3>
+      <div class="row"">
+        <div class="col-sm-10 col-sm-offset-1">
+          <h4>{{hasalaNewCtl.hasalaData.name}}</h4>
+          <p ng-show="hasalaNewCtl.hasalaData.target">Target</p>
+          <div class="progress-container" ng-show="hasalaNewCtl.hasalaData.target">
+            <uib-progressbar class="" value="5" type="primary">
+              0%
+            </uib-progressbar>
+            <p><small>EGP</small> <strong>{{hasalaNewCtl.hasalaData.target}}</strong></p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1">
+          <p>{{hasalaNewCtl.hasalaData.description}}</p>
+        </div>
+      </div>
+      <div class="row" ng-show="hasalaNewCtl.hasalaData.deadline">
+        <div class="col-sm-10 col-sm-offset-1">
+          <div uib-datepicker-popup="dd-MMMM-yyyy" ng-model="hasalaNewCtl.hasalaData.deadline">deadline: {{hasalaNewCtl.getDate(hasalaNewCtl.hasalaData.deadline.date)}} @ {{hasalaNewCtl.getTime(hasalaNewCtl.hasalaData.deadline.time)}}</div>
+        </div>
+      </div>
+
+
+      <div class="row" ng-show="hasalaNewCtl.hasalaData.milestones">
+        <div class="col-sm-10 col-sm-offset-1">
+          <h5>Milestones</h5>
+          <div class="row milestones" ng-repeat="milestone in hasalaNewCtl.hasalaData.milestones">
+            <div class="col-sm-1 order">{{$index+1}}</div>
+            <div class="col-sm-7">
+              <h5>{{milestone.title}}</h5>
+              <p>{{milestone.description}}</p>
+            </div>
+            <div class="col-sm-4">
+              <p>Target: EGP <strong>{{milestone.target}}</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>

@@ -4,7 +4,7 @@
       <h1>{{hasala.details.name}}</h1>
     </div>
     <div class="col-sm-2 col-sm-offset-2">
-      <a class="btn btn-primary btn-block">Edit</a>
+      <a class="btn btn-primary btn-block" ng-show="hasala.details.isEditable">Edit</a>
     </div>
     <div class="col-sm-2">
       <a class="btn btn-danger btn-block" ui-sref="hasalaTerminate({ hasalaId: hasala.details.id, hasalaName: hasala.details.name })">Terminate</a>
@@ -85,7 +85,7 @@
                 <h4>Target: EGP <strong>{{milestone.target}}</strong></h4>
                 <div ng-show="milestone.done" class="bg-success">Milestone Achieved</div>
                 <div ng-show="!milestone.done">
-                  <button class="btn btn-primary btn-block" ng-click="hasala.completeMilestone($index)">Mark as Achieved</button>
+                  <button class="btn btn-primary btn-block" ng-click="hasala.openMilestoneModal('','',$index)">Mark as Achieved</button>
                 </div>
               </div>
             </div>
@@ -123,3 +123,18 @@
   </div>
 
 </div>
+
+
+<script type="text/ng-template" id="modalContent.html">
+  <div class="modal-header">
+      <h3 class="modal-title" id="modal-title">Mark Milestone as achieved</h3>
+  </div>
+  <div class="modal-body" id="modal-body">
+    Are you sure you want to mark milestone as achieved?
+  </div>
+  <div class="modal-footer">
+      <button class="btn btn-primary" type="button" ng-click="$ctrl.ok()">Yes</button>
+      <button class="btn btn-danger" type="button" ng-click="$ctrl.cancel()">Cancel</button>
+  </div>
+</script>
+

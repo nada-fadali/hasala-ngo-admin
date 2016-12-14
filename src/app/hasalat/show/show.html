@@ -4,7 +4,7 @@
       <h1>{{hasala.details.name}}</h1>
     </div>
     <div class="col-sm-2 col-sm-offset-2">
-      <a class="btn btn-primary btn-block" ng-show="hasala.details.isEditable">Edit</a>
+      <a ui-sref="hasalaEdit({ hasalaId: hasala.details.id, hasala: hasala.details })" class="btn btn-primary btn-block" ng-show="hasala.details.isEditable">Edit</a>
     </div>
     <div class="col-sm-2">
       <a class="btn btn-danger btn-block" ui-sref="hasalaTerminate({ hasalaId: hasala.details.id, hasalaName: hasala.details.name })">Terminate</a>
@@ -96,9 +96,9 @@
       <div uib-accordion-group class="panel-default" is-open="true">
         <uib-accordion-heading>
           Follow Ups <fa name="expand" class="pull-right"></fa>
-          <a class="btn btn-success">Add Follow up</a>
         </uib-accordion-heading>
         <div class="container-fluid">
+          <a ui-sref="followupNew({ hasalaId: hasala.details.id, hasala: hasala.details })" class="btn btn-success">Add Follow up</a>
           <div ng-repeat="update in hasala.details.updates">
             <div class="row">
               <div class="col-sm-8 col-sm-offset-2 updates">

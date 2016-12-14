@@ -32,6 +32,12 @@ angular
         params: {hasalaName: null},
         controller: 'hasalatTerminateController as hasalaTerminateCtl'
       })
+      .state('followupNew', {
+        url: '/hasala/:hasalaId/update/new',
+        templateUrl: 'app/followup/new/new.html',
+        params: {hasala: null},
+        controller: 'followupNewController as followupNewCtl'
+      })
       .state('ngoShow', {
         url: '/',
         templateUrl: 'app/ngo/show/show.html',

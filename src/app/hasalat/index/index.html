@@ -29,7 +29,7 @@
           <div class="col-sm-12">
             <div class="btn-group " ng-if="!hasala.isTerminated">
               <a ui-sref="hasala({ hasalaId: hasala.id })" class="btn btn-primary">View</a>
-              <a href="" class="btn btn-success">Add Followup</a>
+              <a ui-sref="followupNew({ hasalaId: hasala.id, hasala: hasala })" class="btn btn-success">Add Followup</a>
               <a ui-sref="hasalaTerminate({ hasalaId: hasala.id, hasalaName: hasala.name })" class="btn btn-danger">Terminate</a>
             </div>
             <div class="isTerminated" ng-if="hasala.isTerminated">

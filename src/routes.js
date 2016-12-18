@@ -6,17 +6,17 @@ angular
 
     $stateProvider
       .state('hasalat', {
-        url: '/hasalat',
+        url: '/hasalas',
         templateUrl: 'app/hasalat/index/index.html',
         controller: 'hasalatIndexController as hasalat'
       })
       .state('hasala', {
-        url: '/hasalat/:hasalaId',
+        url: '/hasalas/:hasalaId',
         templateUrl: 'app/hasalat/show/show.html',
         controller: 'hasalatShowController as hasala'
       })
       .state('hasalaEdit', {
-        url: '/hasalat/:hasalaId/edit',
+        url: '/hasalas/:hasalaId/edit',
         templateUrl: 'app/hasalat/edit/edit.html',
         params: {hasala: null},
         controller: 'hasalatEditController as hasalaEditCtl'

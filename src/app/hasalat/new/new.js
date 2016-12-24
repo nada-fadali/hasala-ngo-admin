@@ -2,6 +2,11 @@ angular
   .module('hasalaNgo')
   .controller('hasalatNewController', ['uibDateParser', 'sendNewHasala', function (uibDateParser, sendNewHasala) {
     this.hasalaData = {};
+    this.categories = [
+      'cateogry 1',
+      'cateogry 2',
+      'cateogry 3'
+    ];
     // handle dates
     this.getDate = function (date) {
       var tmp = new Date(date);

@@ -23,6 +23,14 @@
         </div>
 
         <div class="form-group">
+         <label>Category</label>
+         <select class="form-control">
+          <option>Select Category</option>
+          <option ng-repeat="category in hasalaNewCtl.categories">{{category}}</option>
+         </select>
+        </div>
+
+        <div class="form-group">
          <label>Photo</label>
          <input type="file" name="">
         </div>

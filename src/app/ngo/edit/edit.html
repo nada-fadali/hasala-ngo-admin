@@ -29,9 +29,15 @@
 
         <div class="form-group">
          <label>categories</label>
-         <div ng-repeat="category in ngoEditCtl.ngoData.categories track by $index" class="form-inline">
-          <input type="text" name="" value="category" ng-model="ngoEditCtl.ngoData.categories[$index]" class="form-control">
+         <div ng-repeat="category in ngoEditCtl.ngoData.categories track by $index" class="row">
+            <div class="col-sm-3">
+              <input type="text" name="" value="category" ng-model="ngoEditCtl.ngoData.categories[$index]" class="form-control">
+            </div>
+            <div class="col-sm-3">
+              <a href="" ng-click="ngoEditCtl.deleteCategory($index)" class="text-danger">Delete <fa name="trash"></fa></a>
+            </div>
          </div>
+         <a href="" ng-click="ngoEditCtl.addCategory()">Add Category <fa name="plus"></fa></a>
         </div>
 
         <button type="submit" class="btn btn-primary">Edit <fa name="pencil"></fa> </button>

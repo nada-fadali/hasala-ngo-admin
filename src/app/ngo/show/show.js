@@ -26,5 +26,6 @@ var ngodata = {
   nDonors: 12,
   nDonations: 100,
   nHasalat: 4,
-  nHasalatFinished: 4
+  nHasalatFinished: 4,
+  story: 'this is the long description'
 };

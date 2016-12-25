@@ -7,7 +7,6 @@ angular
     this.deleteCategory = function (index) {
       vm.ngoData.categories.splice(index, 1);
     };
-
     this.addCategory = function () {
       vm.ngoData.categories.push('');
     };

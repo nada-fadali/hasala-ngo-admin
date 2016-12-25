@@ -9,7 +9,8 @@ angular
       description: vm.hasala.description,
       deadline: vm.hasala.deadline,
       nMilestones: vm.hasala.nMilestones,
-      milestones: vm.hasala.milestones
+      milestones: vm.hasala.milestones,
+      story: vm.hasala.story
     };
     // handle dates
     vm.getDate = function (date) {

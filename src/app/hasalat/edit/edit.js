@@ -37,7 +37,5 @@ angular
     };
   }])
   .factory('sendEditHasala', [function () {
-    // TODO
-    // FIX DEADLINE before sending
     return this;
   }]);

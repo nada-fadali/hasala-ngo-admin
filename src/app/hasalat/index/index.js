@@ -3,10 +3,17 @@ angular
   .controller('hasalatIndexController', ['getHasalatList', function (getHasalatList) {
     this.ngo = "Masr El Kheir";
     this.list = getHasalatList;
+    this.categories = categories;
   }])
   .factory('getHasalatList', [function () {
     return hasalatList.reverse();
   }]);
+
+var categories = [
+  'Health',
+  'Eduation',
+  'Social'
+];
 
 var hasalatList = [
   {
@@ -16,7 +23,8 @@ var hasalatList = [
     donation: 25,
     target: 1000,
     status: 'expired',
-    isTerminated: 0
+    isTerminated: 0,
+    category: 'Health'
   },
   {
     id: 1,
@@ -25,7 +33,8 @@ var hasalatList = [
     donation: 75,
     target: 7000,
     status: 'active',
-    isTerminated: 0
+    isTerminated: 0,
+    category: 'Eduation'
   },
   {
     id: 2,
@@ -34,7 +43,8 @@ var hasalatList = [
     donation: 30,
     target: 500,
     status: 'active',
-    isTerminated: 0
+    isTerminated: 0,
+    category: 'Social'
   },
   {
     id: 3,
@@ -43,7 +53,8 @@ var hasalatList = [
     donation: 30,
     target: 500,
     status: 'active',
-    isTerminated: 1
+    isTerminated: 1,
+    category: 'Health'
   }
 ];
 

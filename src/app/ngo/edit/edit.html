@@ -9,12 +9,22 @@
 
         <div class="form-group">
          <label>NGO Name</label>
-         <input type="text" name="" value="ngoEditCtl.ngoData.name" ng-model="ngoEditCtl.ngoData.name" class="form-control" required="">
+         <input type="text" name="" ng-model="ngoEditCtl.ngoData.name" class="form-control" required="">
+        </div>
+
+        <div class="form-group">
+         <label>NGO Name (arabic)</label>
+         <input type="text" name="" ng-model="ngoEditCtl.ngoData.arabic.name" class="form-control" required="">
         </div>
 
         <div class="form-group">
          <label>Description</label>
          <textarea rows="5" ng-model="ngoEditCtl.ngoData.description" class="form-control" required=""></textarea>
+        </div>
+
+        <div class="form-group">
+         <label>Description (arabic)</label>
+         <textarea rows="5" ng-model="ngoEditCtl.ngoData.arabic.description" class="form-control" required=""></textarea>
         </div>
 
         <div class="form-group">
@@ -33,17 +43,43 @@
         </div>
 
         <div class="form-group">
-         <label>categories</label>
-         <div ng-repeat="category in ngoEditCtl.ngoData.categories track by $index" class="row">
-            <div class="col-sm-3">
-              <input type="text" name="" value="category" ng-model="ngoEditCtl.ngoData.categories[$index]" class="form-control">
-            </div>
-            <div class="col-sm-3">
-              <a href="" ng-click="ngoEditCtl.deleteCategory($index)" class="text-danger">Delete <fa name="trash"></fa></a>
-            </div>
-         </div>
-         <a href="" ng-click="ngoEditCtl.addCategory()">Add Category <fa name="plus"></fa></a>
+         <label>Story (arabic)</label>
+         <ng-quill-editor ng-model="ngoEditCtl.ngoData.story"></ng-quill-editor>
         </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+             <label>categories</label>
+             <div ng-repeat="category in ngoEditCtl.ngoData.categories track by $index" class="row">
+                <div class="col-sm-6">
+                  <input type="text" name="" value="category" ng-model="ngoEditCtl.ngoData.categories[$index]" class="form-control">
+                </div>
+                <div class="col-sm-6">
+                  <a href="" ng-click="ngoEditCtl.deleteCategory($index)" class="text-danger">Delete <fa name="trash"></fa></a>
+                </div>
+             </div>
+             <a href="" ng-click="ngoEditCtl.addCategory()">Add Category <fa name="plus"></fa></a>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div class="form-group">
+             <label>categories (arabic)</label>
+             <div ng-repeat="category in ngoEditCtl.ngoData.categories track by $index" class="row">
+                <div class="col-sm-6">
+                  <input type="text" name="" value="category" ng-model="ngoEditCtl.ngoData.categories[$index]" class="form-control">
+                </div>
+                <div class="col-sm-6">
+                  <a href="" ng-click="ngoEditCtl.deleteCategory($index)" class="text-danger">Delete <fa name="trash"></fa></a>
+                </div>
+             </div>
+             <a href="" ng-click="ngoEditCtl.addCategory()">Add Category <fa name="plus"></fa></a>
+            </div>
+          </div>
+        </div>
+
+
 
         <button type="submit" class="btn btn-primary">Edit <fa name="pencil"></fa> </button>
       </form>

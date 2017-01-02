@@ -9,7 +9,12 @@
 
         <div class="form-group">
          <label>Name</label>
-         <input type="text" name="" ng-model="hasalaNewCtl.hasalaData.name" class="form-control" required="">
+         <input type="text" maxlength="2" name="" ng-model="hasalaNewCtl.hasalaData.name" class="form-control" required="">
+        </div>
+
+        <div class="form-group">
+         <label>Name (arabic)</label>
+         <input type="text" maxlength="2" name="" ng-model="hasalaNewCtl.hasalaData.name" class="form-control" required="">
         </div>
 
         <div class="form-group">
@@ -19,7 +24,13 @@
 
         <div class="form-group">
          <label>Description</label>
-         <textarea rows="5" maxlength="144" ng-model="hasalaNewCtl.hasalaData.description" class="form-control" required=""></textarea>
+         <textarea maxlength="144" ng-model="hasalaNewCtl.hasalaData.description" class="form-control" required=""></textarea>
+        </div>
+
+
+        <div class="form-group">
+         <label>Description (arabic)</label>
+         <textarea maxlength="144" ng-model="hasalaNewCtl.hasalaData.description" class="form-control" required=""></textarea>
         </div>
 
         <div class="form-group">
@@ -37,6 +48,11 @@
 
         <div class="form-group">
          <label>Story</label>
+         <ng-quill-editor ng-model="hasalaNewCtl.hasalaData.story"></ng-quill-editor>
+        </div>
+
+        <div class="form-group">
+         <label>Story (arabic)</label>
          <ng-quill-editor ng-model="hasalaNewCtl.hasalaData.story"></ng-quill-editor>
         </div>
 
@@ -78,6 +94,18 @@
               </div>
               <div class="col-sm-12">
                 <textarea placeholder="Description" class="form-control" ng-model="hasalaNewCtl.hasalaData.milestones[$index].description"></textarea>
+              </div>
+            </div>
+
+            <div class="row milestone-card">
+              <div class="col-sm-2">
+                <input type="number" class="form-control" value="{{$index+1}}">
+              </div>
+              <div class="col-sm-7">
+                <input type="text" class="form-control" placeholder="Milestone title (arabic)" ng-model="hasalaNewCtl.hasalaData.milestones[$index].title">
+              </div>
+              <div class="col-sm-12">
+                <textarea placeholder="Description" class="form-control" ng-model="hasalaNewCtl.hasalaData.milestones[$index].description (arabic)"></textarea>
               </div>
             </div>
 

@@ -15,6 +15,11 @@
         </div>
 
         <div class="form-group">
+         <label>Name (arabic)</label>
+         <input type="text" name="" ng-model="" class="form-control" required="">
+        </div>
+
+        <div class="form-group">
          <label>Target</label>
          <input type="number" name="" ng-model="hasalaEditCtl.hasalaData.target" class="form-control" placeholder="in EGP" required="">
         </div>
@@ -25,8 +30,18 @@
         </div>
 
         <div class="form-group">
+         <label>Description (arabic)</label>
+         <textarea rows="5" ng-model="" class="form-control" required=""></textarea>
+        </div>
+
+        <div class="form-group">
          <label>Story</label>
          <ng-quill-editor ng-model="hasalaEditCtl.hasalaData.story"></ng-quill-editor>
+        </div>
+
+        <div class="form-group">
+         <label>Story (arabic)</label>
+         <ng-quill-editor ng-model=""></ng-quill-editor>
         </div>
 
         <div class="form-group">
@@ -72,6 +87,18 @@
               </div>
               <div class="col-sm-12">
                 <textarea placeholder="Description" class="form-control" ng-model="hasalaEditCtl.hasalaData.milestones[$index].description"></textarea>
+              </div>
+            </div>
+
+            <div class="row milestone-card">
+              <div class="col-sm-2">
+                <input type="number" class="form-control" value="{{$index+1}}">
+              </div>
+              <div class="col-sm-7">
+                <input type="text" class="form-control" placeholder="Milestone title (arabic)" ng-model="">
+              </div>
+              <div class="col-sm-12">
+                <textarea placeholder="Description (arabic)" class="form-control" ng-model=""></textarea>
               </div>
             </div>
 

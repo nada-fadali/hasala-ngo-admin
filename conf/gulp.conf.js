@@ -18,7 +18,8 @@ exports.ngModule = 'hasalaNgo';
  */
 exports.paths = {
   src: 'src',
-  dist: 'dist',
+  // dist: 'dist',
+  dist: '/var/www/html/dist'
   tmp: '.tmp',
   e2e: 'e2e',
   tasks: 'gulp_tasks'
